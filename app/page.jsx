@@ -38,7 +38,7 @@ function Completion() {
           Estilos sugeridos:
            <button className="content__btns">Cuento</button>
            <button className="content__btns">Poema</button>
-           <button className="content__btns">Fabula</button>
+           <button className="content__btns">Fábula</button>
            </div>
 
         <div className='content__input'>
