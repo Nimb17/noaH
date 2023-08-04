@@ -1,10 +1,10 @@
 import style from "./Logo.module.css"
 
-const Logo = () => {
+const Logo = ({loading}) => {
   return (
-    <button data-text="Awesome" className={style.button}>
+    <button className={!loading ? `${style.button}`: `${style.button} ${style.buttons}`}>
     <span className={style.actualText}>&nbsp;noaH&nbsp;</span>
-    <span className={style.hoverText} aria-hidden="true">&nbsp;noaH&nbsp;</span>
+    <span className={ !loading ? `${style.hoverText}`: `${style.hoverText} ${style.buttons} `} aria-hidden="true">&nbsp;noaH&nbsp;</span>
 </button>
   )
 }

@@ -13,7 +13,7 @@
   
   /* button styling */
   .button {
-    --border-right: 8px;
+    --border-right: 4px;
     --text-stroke-color: #6b4f8f9d;
     --animation-color: #15ef70;
     --fs-size: 2.5em;
@@ -35,11 +35,17 @@
     inset: 0;
     border-right: var(--border-right) solid var(--animation-color);
     overflow: hidden;
-    transition: 0.5s;
+    transition: ease-in-out 900ms ;
     -webkit-text-stroke: 1px var(--animation-color);
   }
   /* hover */
-  .button .hoverText {
+
+  .buttons .hoverText  {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
+  .buttons:hover .hoverText  {
     width: 100%;
     filter: drop-shadow(0 0 23px var(--animation-color))
   }

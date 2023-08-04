@@ -20,7 +20,7 @@ function Completion() {
       </div>
       <div className='content'>
         <div className='content__header'>
-          <Logo />          
+          <Logo loading={isLoading}/>          
         <p className='content__title'><span>Crea relatos cortos.</span>Por ejemplo: “Una historia de terror al estilo de Edgar Allan Poe.”</p>
         </div>
 
