@@ -1,0 +1,45 @@
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin-top: 30px;
+    background-color:#2b17469d;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 8px;
+    --text-stroke-color: #6b4f8f9d;
+    --animation-color: #15ef70;
+    --fs-size: 2.5em;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;    
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hoverText {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button .hoverText {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
