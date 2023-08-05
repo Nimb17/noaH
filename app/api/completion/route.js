@@ -25,12 +25,13 @@ export async function POST(req) {
   const response = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     stream: true,
-    messages: buildPrompt( ` ${prompt} .La historia debe ser corta, estrictamente menos de 130 palabras y mantener una estructura narrativa profesional` ),
+    messages: [{"role": "system", "content": "Debe ser un relato corto, no más de 150 palabras. Debes detectar y escojer a un escritor para inspirarte en su estilo narrativo. importante no debes revelar al escritor"}, {role: "user", content: ` ${prompt}, historia corta de no mas de 150 palabras y no me nombres tus inspiraciones pero si usa su estilo narrativo `}],
+  
     max_tokens: 300,
     temperature: 0.8,
-    top_p: 1,
-    frequency_penalty: 1,
-    presence_penalty: 1,
+    /* top_p: 1, */
+    /* frequency_penalty: 1,
+    presence_penalty: 1, */
   })
 
   // Convert the response into a friendly text-stream

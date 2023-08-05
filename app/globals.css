@@ -100,6 +100,7 @@ body {
   border: 1px solid #7A7A7A;
   padding: 5px 20px;
   border-radius: 7px;
+  cursor:auto;
 }
 
 .content__btns:hover{
